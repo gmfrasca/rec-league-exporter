@@ -31,5 +31,6 @@ class BenchappCsvExporter(Exporter):
                     "date": date,
                     "time": game.time,
                     "duration": "1:15",  # TODO
+                    "location": game.full_location,
             }
             yield game_data
