@@ -1,0 +1,10 @@
+season: season1
+output_dir: out/
+schedules:
+  - name: example_team_name
+    export_type: ics
+    schedule: 
+      type: dash
+      company_id: fakecompany
+      team_id: 123456
+      season_id: 123
