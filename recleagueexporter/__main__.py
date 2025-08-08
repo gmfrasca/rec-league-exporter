@@ -47,13 +47,16 @@ def main():
         export_type = config.pop("export_type")
         sched_cfg = config.pop("schedule")
         sched_type=sched_cfg.pop("type")
+        logging.info("")
+        logging.info(f"==== STARTING EXPORT: {team_name} ====")
                
         output_file = get_output_file(output_dir, season, team_name, export_type)
         create_dir_if_not_exists(output_file)
 
+        logging.info(f"Exporting {team_name}'s schedule to {output_file} with export type {export_type}")
         rls = RecLeagueExporter(sched_type, sched_cfg)
         rls.export(export_type, output_file)
-
+        logging.info(f"==== EXPORT COMPLETE: {team_name} ====")
 
 
 if __name__ == '__main__':
