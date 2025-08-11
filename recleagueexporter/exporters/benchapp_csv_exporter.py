@@ -4,7 +4,7 @@ import csv
 
 EVENT_TYPES = ["GAME", "SCRIMMAGE", "DROP-IN", "PRACTICE", "EVENT"]
 GAME_TYPES = ["PRE-SEASON", "REGULAR", "PLAYOFF", "TOURNAMENT"]
-CSV_HEADER = ['type', 'game_type', 'title', 'home', 'away', 'date', 'time', 'duration', 'location', 'address', 'notes']
+CSV_HEADER = ['type', 'game_type', 'title', 'away', 'home', 'date', 'time', 'duration', 'location', 'address', 'notes']
 
 
 class BenchappCsvExporter(Exporter):
